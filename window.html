@@ -12,26 +12,33 @@
   <body onload="startGame()">
     <div>
         <center>
-            <p> <strong> WELCOME TO MY GAME </strong> </p>
-            <p> This is a test of the app to see if it works v.1 </p>
-            <script>
+            <h1 style="font-size: 25px"> <strong> Missile Defense </strong> </h1>
+            <p> This is a test of the app to see if it works </p>
+            <canvas id="this" width="900" height="450" style="border:2px solid     #c3c3c3;">
+            Error: Browser does not support canvas element.
+            </canvas>
+            <script type="text/javascript">
+                var main = document.getElementById("this");
+                var render = main.getContext("2d");
+                this.width = 300;
+                this.height = 200;
+                this.style.padding.left: 0;
+                this.style.padding.right: 0;
+                this.style.margin.right: auto;
+                this.style.margin.left: auto;
+                this.style.top = "100px";
+                this.style.position = "center";
+                this.interval = setInterval(updateGameArea, 20);
+                window.addEventListener('keydown', function (e) {
+                    myGameArea.key = e.keyCode;
+                })
+                window.addEventListener('keyup', function (e) {
+                    myGameArea.key = false;
+                })
                 var myGamePiece;
                 function startGame() {
-                    myGamePiece = new component(30, 30, "red", 10, 120);
+                    myGamePiece = new component(30, 30, "red", 50, 10);
                     myGameArea.start();
-                }
-                var myGameArea = {
-                    canvas : document.createElement("canvas"),
-                    start : function() {
-                        this.canvas.width = 500;
-                        this.canvas.height = 500;
-                        this.context = this.canvas.getContext("2d");
-                        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-                        this.interval = setInterval(updateGameArea, 20);
-                    },
-                    clear : function() {
-                        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-                    }
                 }
                 function component(width, height, color, x, y) {
                     this.width = width;
@@ -68,13 +75,11 @@
                     myGamePiece.speedX += 1;
                 }
             </script>
-            <div style="text-align:center;width:480px;">
-                <center>
-                    <button onclick="moveup()">UP</button><br><br>
-                    <button onclick="moveleft()">LEFT</button>
-                    <button onclick="moveright()">RIGHT</button><br><br>
-                    <button onclick="movedown()">DOWN</button>
-                </center>
+            <div style="text-align: center;width: 480px;">
+                <button onclick="moveup()"; padding-left= "0px">UP</button><br><br>
+                <button onclick="moveleft()">LEFT</button>
+                <button onclick="moveright()">RIGHT</button><br><br>
+                <button onclick="movedown()">DOWN</button>
             </div>
         </center>
     </div>

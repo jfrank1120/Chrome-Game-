@@ -1,12 +1,12 @@
 {
-  "name": "Hello World!",
-  "description": "My first Chrome App.",
-  "version": "0.1",
+  "name": "Missile Defender",
+  "description": "Defend yourself from the incoming missile barage while also firing back",
+  "version": "0.0.0.1",
   "manifest_version": 2,
   "app": {
     "background": {
       "scripts": ["background.js"]
     }
   },
-  "icons": { "16": "Images/baseImage.png", "128": "Images/baseImage2.png" }
+  "icons": { "16": "Images/baseImage.png", "128": "Images/128Logo.png" }
 }
