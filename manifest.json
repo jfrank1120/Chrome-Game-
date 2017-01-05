@@ -8,5 +8,5 @@
       "scripts": ["background.js"]
     }
   },
-  "icons": { "16": "Images/baseImage.png", "128": "Images/128Logo.png" }
+  "icons": { "16": "Images/16Logo.png", "128": "Images/128Logo.png" }
 }
