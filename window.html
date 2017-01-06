@@ -14,65 +14,77 @@
         <center>
             <h1 style="font-size: 25px"> <strong> Missile Defense </strong> </h1>
             <p> This is a test of the app to see if it works </p>
-            <canvas id="this" width="900" height="450" style="border:2px solid     #c3c3c3;">
+            <canvas id="canvas" width="900" height="450" style="border:2px solid     #c3c3c3;">
             Error: Browser does not support canvas element.
             </canvas>
             <script type="text/javascript">
-                var main = document.getElementById("this");
+                var canvas =
+                {
+                     canvas : document.createElement("canvas"),
+                }
+                var ctx
+                var circleObj
+                var main = document.getElementById("canvas");
                 var render = main.getContext("2d");
-                this.width = 300;
-                this.height = 200;
-                this.style.padding.left: 0;
-                this.style.padding.right: 0;
-                this.style.margin.right: auto;
-                this.style.margin.left: auto;
-                this.style.top = "100px";
-                this.style.position = "center";
-                this.interval = setInterval(updateGameArea, 20);
-                window.addEventListener('keydown', function (e) {
-                    myGameArea.key = e.keyCode;
-                })
-                window.addEventListener('keyup', function (e) {
-                    myGameArea.key = false;
-                })
-                var myGamePiece;
-                function startGame() {
-                    myGamePiece = new component(30, 30, "red", 50, 10);
-                    myGameArea.start();
+                canvas.width = 300;
+                canvas.height = 200;
+                canvas.style.top = "100px";
+                canvas.style.position = "center";
+                canvas.interval = setInterval(updateGameArea, 20);
+                function startGame()
+                {
+                    circleObj = new component(30, 30, "red", 10, 120);
+                    canvas.start();
                 }
-                function component(width, height, color, x, y) {
-                    this.width = width;
-                    this.height = height;
-                    this.speedX = 0;
-                    this.speedY = 0;
-                    this.x = x;
-                    this.y = y;
-                    this.update = function() {
-                    ctx = myGameArea.context;
+                window.addEventListener('keydown', function (e)
+                {
+                    canvas.key = e.keyCode;
+                })
+                window.addEventListener('keyup', function (e)
+                {
+                    canvas.key = false;
+                })
+                function component(width, height, color, x, y)
+                {
+                    canvas.width = width;
+                    canvas.height = height;
+                    canvas.speedX = 0;
+                    canvas.speedY = 0;
+                    canvas.x = x;
+                    canvas.y = y;
+                    canvas.update = function()
+                    {
+                        ctx = canvas.context;
+                    }
                     ctx.fillStyle = color;
-                    ctx.fillRect(this.x, this.y, this.width, this.height);
+                    ctx.fillRect(canvas.x, canvas.y, canvas.width, canvas.height);
                 }
-                this.newPos = function() {
-                    this.x += this.speedX;
-                    this.y += this.speedY;
+                canvas.newPos = function()
+                {
+                    canvas.x += canvas.speedX;
+                    canvas.y += canvas.speedY;
                 }
+                function updateGameArea()
+                {
+                    canvas.clear();
+                    circleObj.newPos();
+                    circleObj.update();
                 }
-                function updateGameArea() {
-                    myGameArea.clear();
-                    myGamePiece.newPos();
-                    myGamePiece.update();
+                function moveup()
+                {
+                    circleObj.speedY -= 1;
                 }
-                function moveup() {
-                    myGamePiece.speedY -= 1;
+                function movedown()
+                {
+                    circleObj.speedY += 1;
                 }
-                function movedown() {
-                    myGamePiece.speedY += 1;
+                function moveleft()
+                {
+                    circleObj.speedX -= 1;
                 }
-                function moveleft() {
-                    myGamePiece.speedX -= 1;
-                }
-                function moveright() {
-                    myGamePiece.speedX += 1;
+                function moveright()
+                {
+                    circleObj.speedX += 1;
                 }
             </script>
             <div style="text-align: center;width: 480px;">
