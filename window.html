@@ -19,13 +19,12 @@
             </canvas>
             <script src="jscolor.js"></script>
             <script type="text/javascript">
+            document.getElementById('colorPicker').style.display.visibility = "hidden";
                 function newGame() {
                     alert("New Game has Started");
                     var countryNameMessage = "What is the name of your country?";
                     var countryName = promptForInput(countryNameMessage);
-                    var countryColorMessage = "What is your countries color?";
-                    var countryColor = promptForInput(countryColorMessage);
-
+                    showColorPicker('colorPicker');
                 }
                 // Function that prompts the user for input
                 function promptForInput (promptMessage) {
@@ -45,9 +44,11 @@
                     } while (falseInput == true);
                     return output;
                 }
+                // Starts the game
                 function startGame() {
-
-
+                }
+                function showColorPicker(id) {
+                    document.getElementById(id).style.visibility = "visible";
                 }
                 function addElement() {
                     var newObject = document.createElement("canvas");
@@ -59,8 +60,8 @@
             <div style="text-align: center;width: 480px;">
             </p><p>
                 <button onclick = "newGame()">New Game</button>
-                <p>... which might be empty to just display the color:
-                <button class="jscolor {valueElement:null,value:'66ccff'}" style="width:50px; height:20px;"></button>
+                </p> Select a Color <p>
+                <button id= 'colorPicker' class="jscolor {valueElement:null,value:'66ccff'}" style="width:50px; height:20px;"></button>
             </div>
         </center>
     </div>
