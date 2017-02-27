@@ -13,85 +13,50 @@
     <div>
         <center>
             <h1 style="font-size: 25px"> <strong> Missile Defense </strong> </h1>
-            <p> This is a test of the app to see if it works </p>
+            <p> Welcome to Missle Defense. Currrent V = 0.1 </p>
             <canvas id="canvas" width="900" height="450" style="border:2px solid     #c3c3c3;">
             Error: Browser does not support canvas element.
             </canvas>
             <script type="text/javascript">
-                var canvas =
-                {
-                     canvas : document.createElement("canvas"),
+                function promptForInput(String promptMessage) {
+                    String outputString = "";
+                    Boolean falseInput = true;
+                    do {
+                        try {
+                            outputString = prompt(promptMessage);
+                            if (countryName.length == 0) throw Please Enter a Name;
+                            else {
+                            outputString = countryName,substr(0, 10);
+                        }
+                        } catch (error) {
+                            message.innerHTML = "Error - " + error;
+                            falseInput = true;
+                        }
+                    } while (falseInput);
+                    return outPutString;
                 }
-                var ctx
-                var circleObj
-                var main = document.getElementById("canvas");
+                function newGame() {
+                    var countryName = promptForInput("What is the name of your country?");
+                }
+                function startGame() {
+                    addElement;
+
+                }
+                function addElement() {
+                    var newObject = document.createElement("canvas");
+                }
+                var main = document.getElementById("object");
                 var render = main.getContext("2d");
                 canvas.width = 300;
                 canvas.height = 200;
                 canvas.style.top = "100px";
                 canvas.style.position = "center";
                 canvas.interval = setInterval(updateGameArea, 20);
-                function startGame()
-                {
-                    circleObj = new component(30, 30, "red", 10, 120);
-                    canvas.start();
-                }
-                window.addEventListener('keydown', function (e)
-                {
-                    canvas.key = e.keyCode;
-                })
-                window.addEventListener('keyup', function (e)
-                {
-                    canvas.key = false;
-                })
-                function component(width, height, color, x, y)
-                {
-                    canvas.width = width;
-                    canvas.height = height;
-                    canvas.speedX = 0;
-                    canvas.speedY = 0;
-                    canvas.x = x;
-                    canvas.y = y;
-                    canvas.update = function()
-                    {
-                        ctx = canvas.context;
-                    }
-                    ctx.fillStyle = color;
-                    ctx.fillRect(canvas.x, canvas.y, canvas.width, canvas.height);
-                }
-                canvas.newPos = function()
-                {
-                    canvas.x += canvas.speedX;
-                    canvas.y += canvas.speedY;
-                }
-                function updateGameArea()
-                {
-                    canvas.clear();
-                    circleObj.newPos();
-                    circleObj.update();
-                }
-                function moveup()
-                {
-                    circleObj.speedY -= 1;
-                }
-                function movedown()
-                {
-                    circleObj.speedY += 1;
-                }
-                function moveleft()
-                {
-                    circleObj.speedX -= 1;
-                }
-                function moveright()
-                {
-                    circleObj.speedX += 1;
-                }
+
             </script>
             <div style="text-align: center;width: 480px;">
-                <button onclick="moveup()"; padding-left= "0px">UP</button><br><br>
-                <button onclick="moveleft()">LEFT</button>
-                <button onclick="moveright()">RIGHT</button><br><br>
-                <button onclick="movedown()">DOWN</button>
+            </p>  <p>
+                <button onclick="newGame()">New Game</button>
             </div>
         </center>
     </div>
