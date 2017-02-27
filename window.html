@@ -17,29 +17,36 @@
             <canvas id="canvas" width="900" height="450" style="border:2px solid     #c3c3c3;">
             Error: Browser does not support canvas element.
             </canvas>
+            <script src="jscolor.js"></script>
             <script type="text/javascript">
-                function promptForInput(String promptMessage) {
-                    String outputString = "";
-                    Boolean falseInput = true;
+                function newGame() {
+                    alert("New Game has Started");
+                    var countryNameMessage = "What is the name of your country?";
+                    var countryName = promptForInput(countryNameMessage);
+                    var countryColorMessage = "What is your countries color?";
+                    var countryColor = promptForInput(countryColorMessage);
+
+                }
+                // Function that prompts the user for input
+                function promptForInput (promptMessage) {
+                    var output;
+                    var  falseInput = false;
                     do {
+                        falseInput = false;
                         try {
-                            outputString = prompt(promptMessage);
-                            if (countryName.length == 0) throw Please Enter a Name;
-                            else {
-                            outputString = countryName,substr(0, 10);
-                        }
+                            output = prompt(promptMessage);
+                            if (output == null){
+                                throw "No Input";
+                            }
                         } catch (error) {
-                            message.innerHTML = "Error - " + error;
+                            alert(error);
                             falseInput = true;
                         }
-                    } while (falseInput);
-                    return outPutString;
-                }
-                function newGame() {
-                    var countryName = promptForInput("What is the name of your country?");
+                    } while (falseInput == true);
+                    return output;
                 }
                 function startGame() {
-                    addElement;
+
 
                 }
                 function addElement() {
@@ -47,16 +54,13 @@
                 }
                 var main = document.getElementById("object");
                 var render = main.getContext("2d");
-                canvas.width = 300;
-                canvas.height = 200;
-                canvas.style.top = "100px";
-                canvas.style.position = "center";
-                canvas.interval = setInterval(updateGameArea, 20);
 
             </script>
             <div style="text-align: center;width: 480px;">
-            </p>  <p>
-                <button onclick="newGame()">New Game</button>
+            </p><p>
+                <button onclick = "newGame()">New Game</button>
+                <p>... which might be empty to just display the color:
+                <button class="jscolor {valueElement:null,value:'66ccff'}" style="width:50px; height:20px;"></button>
             </div>
         </center>
     </div>
