@@ -14,28 +14,28 @@
         <center>
             <h1 style="font-size: 25px"> <strong> Missile Defense </strong> </h1>
             <p> Welcome to Missle Defense. Currrent V = 0.1 </p>
-            <canvas id="canvas" width="900" height="450" style="border:2px solid     #c3c3c3;">
+            <canvas id="canvas" width="1000" height="550" style="border:2px solid     #c3c3c3;">
             Error: Browser does not support canvas element.
             </canvas>
             <script src="jscolor.js"></script>
+
             <script type="text/javascript">
             document.getElementById('colorPicker').style.display.visibility = "hidden";
                 function newGame() {
-                    alert("New Game has Started");
                     var countryNameMessage = "What is the name of your country?";
-                    var countryName = promptForInput(countryNameMessage);
+                    var countryName = promptForInput(countryNameMessage, "Example Country");
+                    alert("Your country is " + countryName);
                     showColorPicker('colorPicker');
                 }
                 // Function that prompts the user for input
-                function promptForInput (promptMessage) {
+                function promptForInput (promptMessage, startValue) {
                     var output;
                     var  falseInput = false;
                     do {
-                        falseInput = false;
                         try {
-                            output = prompt(promptMessage);
-                            if (output == null){
-                                throw "No Input";
+                            output = prompt(promptMessage, startValue);
+                            if (output != null) {
+                                falseInput = false;
                             }
                         } catch (error) {
                             alert(error);
