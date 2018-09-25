@@ -20,10 +20,11 @@
             <script src="jscolor.js"></script>
 
             <script type="text/javascript">
-            document.getElementById('colorPicker').style.display.visibility = "hidden";
+            document.getElementById('colorPicker').style.display.visibility = false;
                 function newGame() {
                     var countryNameMessage = "What is the name of your country?";
                     var countryName = promptForInput(countryNameMessage, "Example Country");
+                    var countryCreator = new window();
                     alert("Your country is " + countryName);
                     showColorPicker('colorPicker');
                 }
