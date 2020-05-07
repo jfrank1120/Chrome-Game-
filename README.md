@@ -1,5 +1,5 @@
 # Missile Defense
-- Game for google chrome browers written in HMTL5
+- Game for google chrome browers written in HMTL5 using Bootstrap, jQuery, and JavaScript
 
 # Gameplay
 - The player controls one circle with the arrow keys that allows them to block incoming missiles from the enemy, while the cursor
