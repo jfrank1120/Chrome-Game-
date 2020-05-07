@@ -1,68 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
+      <link href="Style.css" type="text/css" rel="stylesheet" />
+      <script src="scripts.js"></script>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <style>
-        canvas {
-            border:5px solid #000000;
-            background-color: #c0c8e7;
-        }
-      </style>
   </head>
   <body onload="startGame()">
     <div>
         <center>
             <h1 style="font-size: 25px"> <strong> Missile Defense </strong> </h1>
-            <p> Welcome to Missle Defense. Currrent V = 0.1 </p>
-            <canvas id="canvas" width="1000" height="550" style="border:2px solid     #c3c3c3;">
-            Error: Browser does not support canvas element.
+            <p>Currrent Version: 0.1</p>
+            <!--
+            <canvas id="canvas" width="1500" height="750" style="border:2px solid #c3c3c3;">
+              Error: Browser does not support canvas element.
             </canvas>
-            <script src="jscolor.js"></script>
-
-            <script type="text/javascript">
-            document.getElementById('colorPicker').style.display.visibility = false;
-                function newGame() {
-                    var countryNameMessage = "What is the name of your country?";
-                    var countryName = promptForInput(countryNameMessage, "Example Country");
-                    var countryCreator = new window();
-                    alert("Your country is " + countryName);
-                    showColorPicker('colorPicker');
-                }
-                // Function that prompts the user for input
-                function promptForInput (promptMessage, startValue) {
-                    var output;
-                    var  falseInput = false;
-                    do {
-                        try {
-                            output = prompt(promptMessage, startValue);
-                            if (output != null) {
-                                falseInput = false;
-                            }
-                        } catch (error) {
-                            alert(error);
-                            falseInput = true;
-                        }
-                    } while (falseInput == true);
-                    return output;
-                }
-                // Starts the game
-                function startGame() {
-                }
-                function showColorPicker(id) {
-                    document.getElementById(id).style.visibility = "visible";
-                }
-                function addElement() {
-                    var newObject = document.createElement("canvas");
-                }
-                var main = document.getElementById("object");
-                var render = main.getContext("2d");
-
-            </script>
+          -->
             <div style="text-align: center;width: 480px;">
             </p><p>
                 <button onclick = "newGame()">New Game</button>
-                </p> Select a Color <p>
-                <button id= 'colorPicker' class="jscolor {valueElement:null,value:'66ccff'}" style="width:50px; height:20px;"></button>
             </div>
         </center>
     </div>
