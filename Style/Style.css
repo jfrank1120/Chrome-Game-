@@ -1,0 +1,11 @@
+#canvas {
+    border:5px solid #000000;
+    background-color: #c0c8e7;
+}
+.main_text {
+    text-align: center,
+    width: 480px
+}
+.country_name {
+    text-align: center
+}
