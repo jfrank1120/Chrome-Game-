@@ -14,7 +14,7 @@ for the player's country.
 # Current Bugs
 - None currently due to no tests of game as of now
 
-#Future Additions
+# Future Additions
 - Ability to control how the country is set up into sectors rather than randomly generated 
 - Different types of missiles that can be fired
 - Player vs Player mulitplayer?
