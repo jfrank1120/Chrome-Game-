@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<title>Missile Defense</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Open Page</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://jaredfrank.dev/Missile-Defense/<datalist><option>https://github.com/jfrank1120/Missile-Defense</option><option>file:///C:/Users/jfran/Documents/GitHub/Chrome_Game_/Public/window.html</option><option>https://jaredfrank.dev/Missile-Defense/</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Test Title</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://jaredfrank.dev/Missile-Defense/<datalist><option>https://jaredfrank.dev/Missile-Defense/</option><option>https://github.com/jfrank1120/Missile-Defense</option><option>file:///C:/Users/jfran/Documents/GitHub/Chrome_Game_/Public/window.html</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//strong<datalist><option>//strong</option><option>css=strong</option></datalist></td><td>Missile Defense</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Set Country Name</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://jaredfrank.dev/Missile-Defense/<datalist><option>https://jaredfrank.dev/Missile-Defense/</option></datalist></td><td></td>
+</tr>
+<tr><td>answerOnNextPrompt</td><td>asdf<datalist><option>asdf</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=new_game_button<datalist><option>id=new_game_button</option><option>//button[@id='new_game_button']</option><option>//button</option><option>css=#new_game_button</option></datalist></td><td></td>
+</tr>
+<tr><td>assertPrompt</td><td>What is the name of your country?<datalist><option>What is the name of your country?</option></datalist></td><td></td>
+</tr>
+<tr><td>assertAlert</td><td>Your country is asdf<datalist><option>Your country is asdf</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Set Country Name on Screen</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://jaredfrank.dev/Missile-Defense/<datalist><option>https://jaredfrank.dev/Missile-Defense/</option></datalist></td><td></td>
+</tr>
+<tr><td>answerOnNextPrompt</td><td>test<datalist><option>test</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=new_game_button<datalist><option>id=new_game_button</option><option>//button[@id='new_game_button']</option><option>//button</option><option>css=#new_game_button</option></datalist></td><td></td>
+</tr>
+<tr><td>assertPrompt</td><td>What is the name of your country?<datalist><option>What is the name of your country?</option></datalist></td><td></td>
+</tr>
+<tr><td>assertAlert</td><td>Your country is test<datalist><option>Your country is test</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//country_name<datalist><option>//country_name</option><option>css=country_name</option></datalist></td><td>test</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Ask For Country Name</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://jaredfrank.dev/Missile-Defense/<datalist><option>https://jaredfrank.dev/Missile-Defense/</option><option>https://github.com/jfrank1120/Missile-Defense</option><option>file:///C:/Users/jfran/Documents/GitHub/Chrome_Game_/Public/window.html</option></datalist></td><td></td>
+</tr>
+<tr><td>assertPrompt</td><td>What is the name of your country?<datalist><option>What is the name of your country?</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=new_game_button<datalist><option>id=new_game_button</option><option>//button[@id='new_game_button']</option><option>//button</option><option>css=#new_game_button</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">No Country Name Entered</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://jaredfrank.dev/Missile-Defense/<datalist><option>https://jaredfrank.dev/Missile-Defense/</option><option>https://github.com/jfrank1120/Missile-Defense</option><option>file:///C:/Users/jfran/Documents/GitHub/Chrome_Game_/Public/window.html</option></datalist></td><td></td>
+</tr>
+<tr><td>answerOnNextPrompt</td><td>" "<datalist><option>" "</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=new_game_button<datalist><option>id=new_game_button</option><option>//button[@id='new_game_button']</option><option>//button</option><option>css=#new_game_button</option></datalist></td><td></td>
+</tr>
+<tr><td>assertPrompt</td><td>What is the name of your country?<datalist><option>What is the name of your country?</option></datalist></td><td></td>
+</tr>
+<tr><td>chooseCancelOnNextPrompt</td><td><datalist><option></option></datalist></td><td></td>
+</tr>
+<tr><td>assertAlert</td><td>Please enter a country name<datalist><option>Please enter a country name</option></datalist></td><td></td>
+</tr>
+<tr><td>assertPrompt</td><td>What is the name of your country?<datalist><option>What is the name of your country?</option></datalist></td><td></td>
+</tr>
+<tr><td></td><td><datalist><option></option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Fail Country Name</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://jaredfrank.dev/Missile-Defense/<datalist><option>https://jaredfrank.dev/Missile-Defense/</option><option>https://github.com/jfrank1120/Missile-Defense</option><option>file:///C:/Users/jfran/Documents/GitHub/Chrome_Game_/Public/window.html</option></datalist></td><td></td>
+</tr>
+<tr><td>chooseCancelOnNextPrompt</td><td><datalist><option></option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=new_game_button<datalist><option>id=new_game_button</option><option>//button[@id='new_game_button']</option><option>//button</option><option>css=#new_game_button</option></datalist></td><td></td>
+</tr>
+<tr><td>assertPrompt</td><td>What is the name of your country?<datalist><option>What is the name of your country?</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>id=new_game_button<datalist><option>id=new_game_button</option><option>//button[@id='new_game_button']</option><option>//button</option><option>css=#new_game_button</option></datalist></td><td>New Game</td>
+</tr>
+</tbody></table>
+</body>
+</html>
